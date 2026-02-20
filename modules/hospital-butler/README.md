@@ -399,8 +399,29 @@ const loadHospitalData = async () => {
 
 ---
 
+## 📊 重构成果
+
+| 指标 | 重构前 | 重构后 | 优化率 |
+|------|--------|--------|--------|
+| 代码行数 | 316行 | 140行 | **-56%** |
+| 类型覆盖率 | ~40% | **100%** |
+| Composables | 0个 | 3个 | **新增** |
+
+---
+
 ## 🔗 相关文件
 
 - [types/hospital.ts](./types/hospital.ts)
 - [composables/useHospitalStatus.ts](./composables/useHospitalStatus.ts)
 - [components/StatusStep.vue](./components/StatusStep.vue)
+
+---
+
+## 📁 返回导航
+
+[⬅️ 返回主目录](../../README.md) | 
+[住院管家](./) | 
+[治疗预约](../treatment-appointment/) | 
+[人才专窗](../talent-window/) | 
+[MDT问诊](../mdt-inquiry/) | 
+[问卷重构](../../questionnaire-refactor/)
