@@ -280,33 +280,60 @@ export function useFlyCheckRisk() { ... }
 ## 📁 目录结构
 
 ```
-modules/
-├── hospital-butler/           # 住院管家
-├── treatment-appointment/     # 治疗预约
-├── talent-window/             # 人才专窗
-├── mdt-inquiry/               # 省中 MDT
-├── medication-manager/        # 用药管理 ⭐
-├── costCenter/                # 费用中心 🔥
-├── smartPreDiagnosis/         # 智能预问诊 🔥
-├── drgSettlement/             # DRG医保结算 🔥
-│   ├── README.md              # 模块说明文档
-│   ├── GUIDE.md               # 开发指南
-│   ├── types/                 # 类型定义
-│   ├── constants/             # 常量
-│   ├── utils/                 # 工具函数
-│   ├── composables/           # 组合式函数
-│   ├── components/            # 组件
-│   │   ├── common/            # 通用组件
-│   │   └── settlement/        # 结算组件
-│   ├── pages/                 # 页面
-│   │   ├── settlement/        # 结算页面
-│   │   └── medicalCopy/       # 病案复印页面
-│   ├── api/                   # API接口
-│   ├── store/                 # 状态管理
-│   ├── mock/                  # Mock数据
-│   └── adapters/              # 适配器层
-└── ...
+internship-showcase/
+├── modules/                          # 业务模块（代码实现）
+│   ├── hospital-butler/              # 住院管家
+│   ├── treatment-appointment/        # 治疗预约
+│   ├── talent-window/                # 人才专窗
+│   ├── mdt-inquiry/                  # 省中 MDT
+│   ├── medication-manager/           # 用药管理 ⭐
+│   ├── cost-center/                  # 费用中心 🔥
+│   ├── smart-pre-diagnosis/          # 智能预问诊 🔥
+│   ├── drg-settlement/               # DRG医保结算 🔥
+│   └── questionnaire-refactor/       # 问卷系统重构
+│
+├── business-output/                  # 业务产出（思维沉淀）💼
+│   ├── knowledge-graph/              # 知识图谱
+│   ├── business-cases/               # 业务案例分析
+│   ├── design-patterns/              # 设计模式分析
+│   ├── interface-docs/               # 接口能力文档
+│   ├── business-analysis/            # 业务价值分析
+│   └── competitive-analysis/         # 竞品分析
+│
+├── examples/                         # 示例代码
+│   └── config-driven-demo/           # 配置驱动示例
+├── shared/                           # 共享资源
+└── docs/                             # 项目文档
+    ├── README.md                     # 主文档
+    └── ARCHITECTURE.md               # 架构说明
 ```
+
+---
+
+## 💼 业务思维产出
+
+除了代码实现，我还沉淀了完整的业务分析与设计文档：
+
+### 📚 业务文档目录
+
+| 文档类别 | 内容 | 链接 |
+|---------|------|------|
+| **知识图谱** | 智慧医疗平台完整知识架构 | [查看](./business-output/knowledge-graph/知识图谱.md) |
+| **业务案例** | 16个核心业务场景详细分析 | [查看](./business-output/business-cases/业务案例.md) |
+| **设计模式** | Adapter、状态机等模式应用 | [查看](./business-output/design-patterns/设计模式.md) |
+| **接口梳理** | 116个接口能力清单 | [查看](./business-output/interface-docs/) |
+| **业务价值** | DRG支付改革视角的业务分析 | [查看](./business-output/business-analysis/) |
+| **竞品分析** | 行业竞品对比与方案优势 | [查看](./business-output/competitive-analysis/竞品分析与方案优势.md) |
+
+### 🎯 核心业务洞察
+
+#### 从DRG支付改革看用药依从性管理
+基于个人拔牙经历的深度思考，分析了医院在DRG/DIP改革下的真实诉求转变：
+- **传统认知**：医院希望患者多复诊 = 多赚钱
+- **现代认知**：医院希望一次治好 = 避免DRG亏损 + 考核达标
+- **业务价值**：用药依从性管理从「可选项」变成「必选项」
+
+[查看完整分析 →](./business-output/business-analysis/用药依从性管理业务分析.md)
 
 ---
 
@@ -318,11 +345,18 @@ modules/
 - 分层架构设计能力
 - 医疗业务深度理解
 
-### 业务理解
-- 患者就医全流程：9个模块覆盖诊前/诊中/诊后
-- 医院信息化系统：对接HIS、支付、处方等
-- 医疗场景复杂性：状态流转、金额精度、数据安全
-- 医保DRG业务：费用分析、风险预警、病案管理
+### 业务成长
+- **患者就医全流程理解**：9个模块覆盖诊前/诊中/诊后
+- **医院信息化系统认知**：对接HIS、支付、处方等
+- **医疗业务洞察能力**：从DRG视角理解医院真实诉求
+- **竞品分析能力**：完整的产品竞争力分析方法论
+
+### 思维模式转变
+```
+初阶：功能思维 → "做个提醒功能让患者按时吃药"
+中阶：用户思维 → "理解患者为什么不按时吃药"
+高阶：业务思维 → "理解医院在DRG改革下的真实诉求"
+```
 
 ---
 
