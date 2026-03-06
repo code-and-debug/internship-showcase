@@ -23,7 +23,9 @@ product-output/
 
 ### 1. PRD - 产品需求文档 ([prd/](./prd/))
 
-**文件**: `prd-smart-medical-platform.md`
+#### 1.1 prd-smart-medical-platform.md（产品设计版）
+
+**定位**: 面向设计和开发的完整产品需求文档
 
 **内容概览**:
 - 产品概述（背景、定位、目标医院）
@@ -40,6 +42,28 @@ product-output/
 - 完整的医疗服务平台PRD，涵盖患者就医全流程
 - 详细的设计规范和交互说明
 - 多端适配方案（微信小程序、支付宝、H5、鸿蒙）
+
+#### 1.2 prd-functional-specification.md（功能清单版）
+
+**定位**: 面向开发实施的功能规格说明书
+
+**内容概览**:
+- 43个功能模块详细说明
+- 所有页面路径和参数定义
+- 通用组件说明（基础组件 + 业务组件）
+- 接口规范和权限安全
+- 埋点统计和迭代计划
+
+**亮点**:
+- 覆盖43个功能模块，200+页面
+- 详细的页面路径和参数说明
+- 组件库说明（10个基础组件 + 5个业务组件）
+- 权限控制和数据安全规范
+
+**适用场景**:
+- 开发人员快速查阅页面路径
+- 测试人员编写测试用例
+- 项目估算工作量参考
 
 ---
 
@@ -88,6 +112,9 @@ product-output/
 
 ## 🔄 更新计划
 
+- [x] 添加 PRD 文档 - 智慧医疗服务平台（prd-smart-medical-platform.md）
+- [x] 添加 PRD 文档 - 功能规格说明书（prd-functional-specification.md）
+- [x] 添加高保真原型（prototype-high-fidelity.html）
 - [ ] 添加产品案例分析（case-study/）
 - [ ] 添加数据分析报告（data-analysis/）
 - [ ] 添加演示PPT（presentation/）
