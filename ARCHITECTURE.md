@@ -99,20 +99,45 @@ const useTreatmentAppointment = () => {
 ## 📁 目录结构规范
 
 ```
-module-name/
-├── types/
-│   └── module.ts           # 类型定义
-├── constants/
-│   └── module.ts           # 常量配置
-├── composables/
-│   ├── useFeatureA.ts      # 功能 A 逻辑
-│   └── useFeatureB.ts      # 功能 B 逻辑
-├── components/
-│   ├── FeatureAComponent.vue
-│   └── FeatureBComponent.vue
-├── README.md               # 模块说明
-└── ModulePage.vue          # 页面组件
+internship-showcase/
+├── modules/                     # 业务模块目录
+│   ├── module-name/
+│   │   ├── types/
+│   │   │   └── index.ts        # 类型定义
+│   │   ├── constants/
+│   │   │   └── index.ts        # 常量配置
+│   │   ├── composables/
+│   │   │   ├── useFeatureA.ts  # 功能 A 逻辑
+│   │   │   └── useFeatureB.ts  # 功能 B 逻辑
+│   │   ├── components/
+│   │   │   ├── FeatureA.vue
+│   │   │   └── FeatureB.vue
+│   │   ├── pages/
+│   │   │   └── index.vue       # 页面组件
+│   │   ├── README.md           # 模块说明
+│   │   └── GUIDE.md            # 开发指南(可选)
+│   └── ...
+├── examples/                    # 示例代码
+│   └── config-driven-demo/
+├── shared/                      # 共享资源
+│   ├── types/
+│   ├── composables/
+│   └── utils/
+├── README.md
+└── ARCHITECTURE.md
 ```
+
+### 命名规范
+
+- **目录名**: 使用 `kebab-case`（短横线连接的小写字母）
+  - ✅ `cost-center/`, `smart-pre-diagnosis/`, `drg-settlement/`
+  - ❌ `costCenter/`, `smartPreDiagnosis/`, `drgSettlement/`
+
+- **组件文件**: 使用 `PascalCase`
+  - ✅ `DataCard.vue`, `CostStructure.vue`
+
+- **组合式函数**: 使用 `camelCase`，以 `use` 开头
+  - ✅ `useDRGAnalysis.ts`, `useCostComparison.ts`
 
 ## 🔗 模块依赖关系
 
