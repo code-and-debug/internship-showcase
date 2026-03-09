@@ -1,0 +1,51 @@
+# Shadow Mode Deployment Configuration
+
+apiVersion: medical.ai/v1
+kind: ShadowDeployment
+metadata:
+  name: ai-generated-code-shadow
+  namespace: medical-ai-governance
+
+spec:
+  service:
+    name: code-generation-shadow
+    replicas: 1
+    securityContext:
+      runAsNonRoot: true
+      readOnlyRootFilesystem: true
+
+  shadowTraffic:
+    initialPercentage: 0
+    autoScaling:
+      enabled: true
+      steps:
+        - name: "observation"
+          percentage: 0
+          duration: "7d"
+        - name: "validation"
+          percentage: 1
+          duration: "7d"
+          exitCriteria:
+            - metric: accuracy
+              threshold: ">= 0.99"
+        - name: "production-ready"
+          percentage: 50
+          manualApproval: true
+
+  hallucinationDetection:
+    enabled: true
+    detectors:
+      - name: phantom_api
+        type: static_analysis
+      - name: medical_accuracy
+        type: domain_specific
+
+  rollback:
+    automatic:
+      enabled: true
+      triggers:
+        - metric: error_rate
+          threshold: "> 0.05"
+        - metric: compliance_violations_critical
+          threshold: "> 0"
+          immediate: true

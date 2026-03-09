@@ -1,0 +1,67 @@
+# General Software Prompt Registry
+
+version: "1.0"
+domain: general-software
+description: "通用软件AI代码生成提示词注册表"
+
+global_context:
+  code_standards:
+    language: "TypeScript"
+    max_complexity: 15
+    max_nesting: 4
+    require_tests: "optional"
+  security_baseline:
+    - "禁止eval和动态执行"
+    - "禁止硬编码密钥"
+    - "SQL必须参数化"
+  cost_optimization:
+    preferred_model: "gpt-3.5-turbo"
+    fallback_model: "gpt-4"
+    cache_enabled: true
+    max_tokens_per_request: 4000
+
+prompts:
+  general-api-generation:
+    id: "P-G001"
+    version: "1.2.0"
+    description: "生成标准REST API接口"
+    template: |
+      ## 角色
+      你是资深软件工程师，熟悉{{framework}}框架。
+      
+      ## 任务
+      为{{resource_name}}资源生成CRUD API接口。
+      
+      ## 技术要求
+      1. 使用TypeScript，类型定义清晰
+      2. 输入数据使用Zod验证
+      3. 错误处理包含HTTP状态码
+      4. 可选：生成基础单元测试
+    
+    variables:
+      - name: framework
+        required: true
+        enum: ["Express", "Fastify", "NestJS"]
+      - name: resource_name
+        required: true
+
+  ui-component-generation:
+    id: "P-G002"
+    version: "1.0.1"
+    description: "生成React/Vue组件"
+    
+  code-refactoring:
+    id: "P-G004"
+    version: "1.0.0"
+    description: "重构现有代码"
+
+usage:
+  model_selection:
+    default: "gpt-3.5-turbo"
+    rules:
+      - condition: "complexity == 'high'"
+        model: "gpt-4"
+  
+  cost_limits:
+    daily_usd: 50
+    per_request_tokens: 4000

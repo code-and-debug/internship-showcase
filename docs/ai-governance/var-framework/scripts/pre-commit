@@ -1,0 +1,66 @@
+#!/bin/bash
+# V.A.R.框架 - Git预提交钩子
+
+set -e
+
+echo "=========================================="
+echo "V.A.R. Framework Pre-Commit Checks"
+echo "=========================================="
+
+errors=0
+
+# === VERIFIABLE CHECKS ===
+echo ""
+echo "[1/3] Verifiable: TypeScript类型检查..."
+if npm run typecheck --silent 2>/dev/null; then
+  echo "  ✅ 类型检查通过"
+else
+  echo "  ❌ 类型检查失败"
+  errors=$((errors + 1))
+fi
+
+echo ""
+echo "[2/3] Verifiable: ESLint检查..."
+if npm run lint --silent 2>/dev/null; then
+  echo "  ✅ ESLint检查通过"
+else
+  echo "  ❌ ESLint检查失败"
+  errors=$((errors + 1))
+fi
+
+# === AUDITABLE CHECKS ===
+echo ""
+echo "[3/3] Auditable: 检查AI代码头部..."
+
+files=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(ts|tsx|js|jsx)$' || true)
+
+missing_header=0
+for file in $files; do
+  if [[ "$file" == *"human-only"* ]]; then
+    continue
+  fi
+  
+  if grep -q "@generator" "$file" 2>/dev/null; then
+    if ! grep -q "@prompt-hash" "$file" 2>/dev/null; then
+      echo "  ⚠️  $file 缺少 @prompt-hash"
+      missing_header=$((missing_header + 1))
+    fi
+  fi
+done
+
+if [ $missing_header -eq 0 ]; then
+  echo "  ✅ AI代码头部检查通过"
+fi
+
+# === SUMMARY ===
+echo ""
+echo "=========================================="
+if [ $errors -eq 0 ]; then
+  echo "✅ V.A.R.检查通过，准备提交..."
+  echo "=========================================="
+  exit 0
+else
+  echo "❌ 发现 $errors 个错误，请修复后重试"
+  echo "=========================================="
+  exit 1
+fi

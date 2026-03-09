@@ -1,0 +1,63 @@
+# Medical AI Prompt Registry
+
+version: "2.0"
+domain: medical-software
+description: "医疗软件AI代码生成提示词注册表 - HIPAA合规"
+
+global_context:
+  compliance_requirements:
+    - "HIPAA隐私规则"
+    - "HIPAA安全规则"
+  code_standards:
+    strict_types: true
+    max_complexity: 10
+    require_tests: true
+  banned_patterns:
+    - "eval"
+    - "hardcoded patient_id"
+
+prompts:
+  medical-api-generation:
+    id: "P-001"
+    version: "1.3.0"
+    description: "生成符合医疗标准的API接口"
+    template: |
+      ## 角色
+      你是医疗软件领域的专家工程师，熟悉HIPAA合规要求。
+      
+      ## 任务
+      为{{module_name}}模块生成TypeScript API代码，处理{{data_type}}数据。
+      
+      ## 强制要求
+      1. **HIPAA合规**: 所有PHI数据必须加密，禁止硬编码患者标识符
+      2. **代码质量**: TypeScript strict模式，函数圈复杂度≤10
+      3. **安全要求**: 使用参数化SQL查询，输入数据必须验证
+      4. **测试要求**: 生成对应的Vitest单元测试，边界条件覆盖率100%
+    
+    variables:
+      - name: module_name
+        required: true
+      - name: data_type
+        required: true
+        enum: ["patient", "medical_record", "billing", "diagnosis"]
+
+  drg-calculation:
+    id: "P-002"
+    version: "2.1.0"
+    description: "生成DRG/DIP分组计算逻辑"
+    criticality: high
+    requires_human_review: true
+
+shadow_mode:
+  enabled: true
+  traffic_percentage: 0
+  auto_promote:
+    enabled: true
+    conditions:
+      - metric: accuracy_vs_production
+        threshold: ">= 0.99"
+        duration: "7d"
+
+audit:
+  log_usage: true
+  retention_days: 2555  # 7年 (HIPAA要求)
