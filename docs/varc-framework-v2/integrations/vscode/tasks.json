@@ -1,0 +1,93 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "VARC: Quick Save",
+      "type": "shell",
+      "command": ".\\scripts\\varc-quick-save.ps1",
+      "windows": {
+        "command": ".\\scripts\\varc-quick-save.ps1"
+      },
+      "linux": {
+        "command": "./scripts/varc-quick-save.sh"
+      },
+      "osx": {
+        "command": "./scripts/varc-quick-save.sh"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "VARC: Fork Session",
+      "type": "shell",
+      "command": ".\\scripts\\varc-fork-v2.ps1 -AutoCopy",
+      "windows": {
+        "command": ".\\scripts\\varc-fork-v2.ps1 -AutoCopy"
+      },
+      "linux": {
+        "command": "./scripts/varc-fork-v2.sh -AutoCopy"
+      },
+      "osx": {
+        "command": "./scripts/varc-fork-v2.sh -AutoCopy"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "VARC: Doctor",
+      "type": "shell",
+      "command": ".\\scripts\\varc-doctor.ps1",
+      "windows": {
+        "command": ".\\scripts\\varc-doctor.ps1"
+      },
+      "linux": {
+        "command": "./scripts/varc-doctor.sh"
+      },
+      "osx": {
+        "command": "./scripts/varc-doctor.sh"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "VARC: Doctor (Fix)",
+      "type": "shell",
+      "command": ".\\scripts\\varc-doctor.ps1 -Fix",
+      "windows": {
+        "command": ".\\scripts\\varc-doctor.ps1 -Fix"
+      },
+      "linux": {
+        "command": "./scripts/varc-doctor.sh -Fix"
+      },
+      "osx": {
+        "command": "./scripts/varc-doctor.sh -Fix"
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

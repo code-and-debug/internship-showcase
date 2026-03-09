@@ -1,0 +1,26 @@
+#!/bin/sh
+# V.A.R.C. v2.0 - Git Pre-commit Hook
+# 在提交前自动保存会话状态
+
+echo "🔍 V.A.R.C. 检查中..."
+
+# 检查是否存在 V.A.R.C. 快速保存脚本
+if [ -f ".varc/scripts/varc-quick-save.ps1" ]; then
+    echo "💾 自动保存会话状态..."
+    pwsh -File .varc/scripts/varc-quick-save.ps1 --silent
+    if [ $? -eq 0 ]; then
+        echo "✅ 会话已保存"
+    else
+        echo "⚠️  会话保存失败，但继续提交"
+    fi
+elif [ -f ".varc/scripts/varc-quick-save.sh" ]; then
+    echo "💾 自动保存会话状态..."
+    bash .varc/scripts/varc-quick-save.sh --silent
+    if [ $? -eq 0 ]; then
+        echo "✅ 会话已保存"
+    else
+        echo "⚠️  会话保存失败，但继续提交"
+    fi
+fi
+
+exit 0

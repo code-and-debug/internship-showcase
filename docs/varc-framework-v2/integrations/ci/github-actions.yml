@@ -1,0 +1,35 @@
+# V.A.R.C. v2.0 - GitHub Actions 集成示例
+# 保存为 .github/workflows/varc-check.yml
+
+name: V.A.R.C. Check
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  varc-validation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    
+    - name: Setup PowerShell
+      uses: PowerShell/PowerShell@v7
+    
+    - name: V.A.R.C. Health Check
+      run: |
+        if [ -f "./scripts/varc-doctor.ps1" ]; then
+          pwsh ./scripts/varc-doctor.ps1 --full
+        fi
+      continue-on-error: true
+    
+    - name: Check Session Continuity
+      run: |
+        RECENT_COMMITS=$(git log --oneline -5)
+        echo "Recent commits:"
+        echo "$RECENT_COMMITS"

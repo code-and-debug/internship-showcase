@@ -1,0 +1,39 @@
+{
+  // V.A.R.C. v2.0 VS Code 集成配置
+  // 将此配置复制到 .vscode/settings.json
+
+  // 文件保存时自动运行 varc-quick-save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+
+  // 任务配置
+  "tasks.quickOpen.showAll": true,
+  "tasks.quickOpen.history": 5,
+
+  // 文件关联
+  "files.associations": {
+    "session-*.md": "markdown",
+    ".varc-config.yml": "yaml"
+  },
+
+  // 排除文件
+  "files.exclude": {
+    ".ai-sessions/archive": true
+  },
+
+  // 搜索排除
+  "search.exclude": {
+    ".ai-sessions/archive": true,
+    ".ai-sessions/**/current.lnk": true
+  },
+
+  // 编辑器配置
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // Markdown 配置
+  "markdown.preview.breaks": true,
+  "markdown.validate.enabled": true
+}
