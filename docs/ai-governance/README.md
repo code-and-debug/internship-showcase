@@ -52,7 +52,7 @@ docs/ai-governance/
 2. **13天实施计划** → IMPLEMENTATION_GUIDE.md 第3部分
 3. **验证清单** → [var-framework/CHECKLIST.md](./var-framework/CHECKLIST.md)
 
-### 如果你要写简历/面试
+### 如果你要写技术文档
 
 1. **工程演进历程** → [../engineering-evolution.md](../engineering-evolution.md)
 2. **框架架构图** → var-framework/README.md (Mermaid图)
@@ -87,16 +87,6 @@ docs/ai-governance/
 - 代码审查: 100% AI代码带元数据
 - 回滚时间: < 5分钟
 - 生产事故: 0 (影子模式验证期间)
-```
-
-### 简历亮点
-
-```markdown
-- 设计并实现V.A.R.（可验证/可审计/可恢复）AI代码治理框架
-- 建立Guardrails-as-Code体系，使用OPA/Rego策略自动拦截违规代码
-- 实现Shadow Mode部署，0%流量开始，基于指标自动推进，确保零生产事故
-- 建立Prompt Registry和ADR机制，实现AI决策的完整可追溯性
-- 主导13天AI-Native工程转型，代码优化率62%，类型安全100%
 ```
 
 ## 相关资源
