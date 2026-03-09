@@ -312,7 +312,8 @@ modules/
 - ✅ [DRG 医疗业务深度分析](./docs/rac-framework/examples/business-analysis.md)
 - ✅ [问卷系统架构评审](./docs/rac-framework/examples/architecture-design.md)
 
-> **完整文档**: [RAC-FLOW 框架](./docs/rac-framework/RAC-FLOW.md)  
+> **完整文档**: [RAC-FLOW 框架（基础版）](./docs/rac-framework/RAC-FLOW.md)  
+> **进阶协议**: [RAC-Protocol-v1（进阶版，含去讨好化机制）](./docs/rac-framework/RAC-Protocol-v1.md)  
 > **快速开始**: [框架 README](./docs/rac-framework/README.md)
 
 ---
