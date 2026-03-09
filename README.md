@@ -22,6 +22,7 @@
 - [🎨 产品设计](#-产品设计)
 - [💻 技术实现](#-技术实现)
 - [🛠️ V.A.R.C. 框架](#-varc-框架)
+- [🧠 RAC-FLOW 认知增强框架](#-rac-flow-认知增强框架)
 - [📞 联系方式](#-联系方式)
 
 ---
@@ -284,6 +285,35 @@ modules/
 > **完整文档**: [V.A.R.C. 框架文档](./docs/varc-framework/VARC-README.md)  
 > **快速开始**: [QUICKSTART](./docs/varc-framework-v2/QUICKSTART.md)  
 > **架构说明**: [ARCHITECTURE-v2](./docs/varc-framework-v2/ARCHITECTURE-v2.md)
+
+---
+
+## 🧠 RAC-FLOW 认知增强框架
+
+### 为什么开发这个框架？
+
+在长期使用 AI 辅助工作的过程中，我发现一个核心问题：
+
+> **AI 的默认输出是"平均化"的——它倾向于生成最安全、最通用的答案，而非最有洞察力的答案。**
+
+为了突破这个局限，我总结了 **RAC-FLOW** 五步法：
+
+| 步骤 | 核心动作 | 解决问题 |
+|------|---------|----------|
+| **R**eflective | 元认知注入 | 避免 AI 盲目生成，先建立思考框架 |
+| **A**dversarial | 对抗验证 | 红队攻击，暴露逻辑漏洞 |
+| **C**ognitive | 极端约束 | 通过限制迫使 AI 进入抽象层级 |
+
+### 实战验证
+
+该框架已在以下场景验证：
+
+- ✅ [本仓库 README 的产品定位重构](./docs/rac-framework/examples/readme-optimization.md)
+- ✅ [DRG 医疗业务深度分析](./docs/rac-framework/examples/business-analysis.md)
+- ✅ [问卷系统架构评审](./docs/rac-framework/examples/architecture-design.md)
+
+> **完整文档**: [RAC-FLOW 框架](./docs/rac-framework/RAC-FLOW.md)  
+> **快速开始**: [框架 README](./docs/rac-framework/README.md)
 
 ---
 
