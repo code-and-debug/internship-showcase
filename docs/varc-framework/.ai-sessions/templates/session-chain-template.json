@@ -1,0 +1,23 @@
+{
+  "chain_id": "chain-feature-name",
+  "description": "功能描述",
+  "root_session": "sess_YYYYMMDD_00_root",
+  "current_tip": "sess_YYYYMMDD_NN_hash",
+  "status": "active",
+  "sessions": [
+    {
+      "id": "sess_YYYYMMDD_00_root",
+      "timestamp": "2024-01-01T00:00:00Z",
+      "outcome": "completed",
+      "summary": "初始化会话",
+      "code_commit": "git:abc1234",
+      "next_reason": "上下文耗尽"
+    }
+  ],
+  "metrics": {
+    "total_tokens_consumed": 0,
+    "tool_calls_total": 0,
+    "human_interventions": 0,
+    "rollbacks_count": 0
+  }
+}

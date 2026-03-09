@@ -1,0 +1,31 @@
+{
+  "chain_id": "chain-parser-refactor",
+  "description": "重构旧版Parser以支持TypeScript",
+  "root_session": "sess_20240308_00_root",
+  "current_tip": "sess_20240309_01_a7b3d9",
+  "status": "active",
+  "sessions": [
+    {
+      "id": "sess_20240308_00_root",
+      "timestamp": "2024-03-08T09:00:00Z",
+      "outcome": "completed",
+      "summary": "完成基础架构设计",
+      "code_commit": "git:abc1234",
+      "next_reason": "上下文耗尽，需实现细节"
+    },
+    {
+      "id": "sess_20240309_01_a7b3d9",
+      "timestamp": "2024-03-09T16:45:00Z",
+      "outcome": "checkpointed",
+      "summary": "实现递归下降，卡在嵌套注释",
+      "code_commit": "git:def5678",
+      "next_reason": "上下文阈值78%"
+    }
+  ],
+  "metrics": {
+    "total_tokens_consumed": 450000,
+    "tool_calls_total": 67,
+    "human_interventions": 5,
+    "rollbacks_count": 2
+  }
+}

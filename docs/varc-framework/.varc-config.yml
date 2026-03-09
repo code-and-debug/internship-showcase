@@ -1,0 +1,58 @@
+# V.A.R.C. 框架配置
+version: "1.0.0"
+
+# === 触发器配置 ===
+checkpoint:
+  auto_save:
+    enabled: true
+    context_threshold: 75%      # 上下文使用达75%时自动提醒保存
+    time_interval: 30min        # 最长30分钟强制保存（防止意外丢失）
+  manual_markers:
+    - "重大决策点"
+    - "方案废弃"
+    - "架构变更"
+
+# === 验证配置 (Verifiable) ===
+verification:
+  required_before_save:
+    - command: "npm run typecheck"
+      fail_action: "warn"       # warn | block
+    - command: "npm test -- --related"
+      fail_action: "block"      # 测试失败禁止保存会话
+  
+  snapshot_must_include:
+    - "package.json"
+    - "tsconfig.json"
+    - "src/**/*.spec.ts"         # 测试文件用于状态重建
+
+# === 审计配置 (Auditable) ===
+audit:
+  prompt_db_path: "./prompts"
+  require_headers: true         # AI代码必须包含生成元数据
+  git_integration:
+    auto_commit: true           # 保存会话时自动git commit
+    commit_template: "[VARC] {session_id} - {summary}"
+  
+  chain_maintenance:
+    auto_link: true             # 自动维护会话链
+    archive_after_days: 30      # 30天后归档到压缩存储
+
+# === 恢复配置 (Recoverable) ===
+recovery:
+  backup:
+    enabled: true
+    remote: ""                  # 远程仓库URL
+    branch_prefix: "session-"
+    push_on_save: true
+  
+  continuity:
+    context_inheritance: "strict"  # strict | loose
+    max_chain_depth: 10            # 防止无限链式会话
+    require_explicit_constraints: true  # 新会话必须确认约束
+
+# === 排错增强 ===
+debugging:
+  diff_tool: "code --diff"      # 对比会话间代码变更
+  log_retention: "10_sessions"  # 保留最近10个会话的详细日志
+  error_correlation:            # 错误与会话关联
+    auto_tag_issues: true       # 发现Bug时自动关联到生成会话

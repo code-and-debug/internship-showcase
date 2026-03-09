@@ -18,6 +18,7 @@
 - [💻 技术产出](#-技术产出)
 - [💼 业务产出](#-业务产出)
 - [🎨 产品产出](#-产品产出)
+- [🧠 AI 工程化框架 (V.A.R.C.)](#-ai-工程化框架-varc)
 - [🎓 实习收获](#-实习收获)
 - [📞 联系方式](#-联系方式)
 
@@ -114,6 +115,9 @@ internship-showcase/
 │   ├── types/                           # 共享类型定义
 │   └── utils/                           # 工具函数
 │
+├── 📁 docs/                             # 📖 文档资料
+│   └── varc-framework/                  # V.A.R.C. AI工程化框架
+│
 ├── 📄 README.md                         # 本文件
 ├── 📄 ARCHITECTURE.md                   # 架构设计文档
 └── 📄 LICENSE                           # MIT 许可证
@@ -201,6 +205,63 @@ modules/
 
 ---
 
+## 🧠 AI 工程化框架 (V.A.R.C.)
+
+> **V**erifiable · **A**uditable · **R**ecoverable · **C**onversational  
+> 对话原生工程治理框架
+
+在实习期间，我总结并开发了一套 **V.A.R.C.** 框架，用于解决长上下文 AI 开发中的状态管理问题。
+
+### 核心痛点
+
+- **上下文丢失**：长对话中 AI 会"遗忘"之前的约束和决策
+- **无法追溯**：跨多个对话框的会话历史无法追踪
+- **重复踩坑**：AI 重复尝试已废弃的解决方案
+
+### 解决方案
+
+| 组件 | 功能 | 对应 V.A.R. 维度 |
+|-----|------|-----------------|
+| **Session Snapshot** | 会话快照，记录约束/状态/决策/资源 | Verifiable |
+| **Session Chain** | 跨对话的功能演进追踪 | Auditable |
+| **Recovery Protocol** | 灾难恢复模板，处理 AI"失忆" | Recoverable |
+| **Fork Script** | 自动化生成分叉提示词 | Conversational |
+
+### 框架特性
+
+- ✅ **不可变约束继承**：新会话自动继承约束，防止偏离
+- ✅ **自动化工具链**：PowerShell/Bash 脚本支持全流程
+- ✅ **跨平台支持**：Windows/Linux/Mac 全平台兼容
+- ✅ **开箱即用**：包含完整模板和示例
+
+### 使用场景
+
+- 长上下文开发（复杂功能需多个 AI 对话）
+- 多轮架构设计（架构决策跨会话追踪）
+- Agent 调试（保存中间状态）
+- 团队协作（多开发者接力使用 AI）
+
+### 快速开始
+
+```powershell
+# Windows
+cd docs/varc-framework
+.\varc-init.ps1 -ProjectName "my-project"
+
+# Linux/Mac
+./varc-init.sh -p "my-project"
+```
+
+### 文档链接
+
+| 文档 | 说明 |
+|-----|------|
+| [📘 框架完整文档](./docs/varc-framework/VARC-README.md) | 设计理念、核心概念、使用指南 |
+| [📙 快速参考卡](./docs/varc-framework/.ai-sessions/varc-QUICKREF.md) | 常用命令速查 |
+| [📗 目录结构](./docs/varc-framework/DIRECTORY-STRUCTURE.md) | 文件组织说明 |
+
+---
+
 ## 🎓 实习收获
 
 ### 技术成长
@@ -232,7 +293,7 @@ modules/
 - **作者**: 叶泽宇
 - **邮箱**: [your-email@example.com]
 - **仓库**: https://gitee.com/hjkfyhhhf/internship-showcase
-- **更新时间**: 2026年3月
+- **更新时间**: 2025年3月
 
 ---
 
