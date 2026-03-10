@@ -35,8 +35,8 @@
 - **Node版本**: v18.12.0
 - **包管理器**: Yarn 4.0.2
 - **部署环境**: 
-  - 测试环境: https://health.eheren.com/V3_h5/#/
-  - 正式环境: https://h5.eheren.com/V3_h5/#/
+  - 测试环境: https://test.example-hospital.com/patient-app/#/
+  - 正式环境: https://h5.example-hospital.com/patient-app/#/
 
 ---
 
@@ -219,7 +219,7 @@
 
 #### 3.6.1 用药提醒列表 (pagesC/medicationManager/medicationList)
 - **功能描述**: 管理患者用药计划
-- **参数**: `sysCode`, `token`, `herenId`
+- **参数**: `sysCode`, `token`, `patientId`
 - **核心功能**:
   - 用药列表
   - 提醒设置
@@ -392,7 +392,7 @@
 
 #### 3.13.1 排队叫号 (pagesC/queueNumber/queueNumber)
 - **功能描述**: 实时排队叫号信息
-- **参数**: `sysCode`, `token`, `herenId`
+- **参数**: `sysCode`, `token`, `patientId`
 - **功能点**:
   - 当前叫号
   - 我的排队
@@ -438,7 +438,7 @@
 
 #### 3.16.1 我的医生 (pagesC/myDoctor/myDoctor)
 - **功能描述**: 管理关注的医生
-- **参数**: `sysCode`, `token`, `herenId`
+- **参数**: `sysCode`, `token`, `patientId`
 - **功能点**:
   - 医生列表
   - 医生主页
@@ -780,7 +780,7 @@
 | 参数名 | 说明 | 必填 |
 |--------|------|------|
 | sysCode | 系统编码 | 是 |
-| herenId | 患者ID | 部分页面 |
+| patientId | 患者ID | 部分页面 |
 | patientId | 就诊人ID | 部分页面 |
 | token | 登录令牌 | 需要登录的页面 |
 

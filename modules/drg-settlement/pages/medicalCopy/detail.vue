@@ -182,7 +182,7 @@ const cancelApply = () => {
 // 联系医院
 const contactHospital = () => {
   uni.makePhoneCall({
-    phoneNumber: '0571-12345678',
+    phoneNumber: '0571-XXXXXXXX',
   });
 };
 
