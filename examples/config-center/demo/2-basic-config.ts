@@ -25,13 +25,13 @@ const mockConfigTable: Record<string, any> = {
   '1001033': {
     sysCode: '1001033',
     name: '台州市第一人民医院',
-    wxAppid: 'wxe26143481567cb97',
+    wxAppid: 'wx_demo_xxxxxxxx001',
     features: { drugDelivery: true, ocr: true }
   },
   '1001035': {
     sysCode: '1001035',
     name: '玉环市第二人民医院',
-    wxAppid: 'wx718cec315197969f',
+    wxAppid: 'wx_demo_xxxxxxxx002',
     features: { drugDelivery: false, ocr: true }
   }
 };

@@ -200,7 +200,7 @@ config-center/
 基础配置 (config/tenants/1001033.json)
 ├── sysCode: "1001033"
 ├── name: "台州市第一人民医院"
-├── wxAppid: "wxe26143481567cb97"
+├── wxAppid: "wx_demo_xxxxxxxx001"
 └── sConfig:
     ├── homeNavTitleLogo: "https://cdn.eheren.com/logo/1001033.png"
     └── isDrugDelivery: "1"
@@ -209,7 +209,7 @@ config-center/
 
 环境覆盖 (config/environments/dev/1001033.json)
 └── overrides:
-    ├── wxAppid: "wxe26143481567cb97-dev"  ← 覆盖
+    ├── wxAppid: "wx_demo_xxxxxxxx001-dev"  ← 覆盖
     └── sConfig:
         ├── apiBaseUrl: "https://dev-api.eheren.com"  ← 新增
         └── debugMode: true  ← 新增
@@ -219,7 +219,7 @@ config-center/
 最终配置 (dev 环境)
 ├── sysCode: "1001033"  ← 继承基础
 ├── name: "台州市第一人民医院"  ← 继承基础
-├── wxAppid: "wxe26143481567cb97-dev"  ← 覆盖
+├── wxAppid: "wx_demo_xxxxxxxx001-dev"  ← 覆盖
 └── sConfig:
     ├── homeNavTitleLogo: "https://cdn.eheren.com/logo/1001033.png"  ← 继承
     ├── isDrugDelivery: "1"  ← 继承

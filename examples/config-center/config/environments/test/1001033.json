@@ -7,7 +7,7 @@
     "promotedFrom": "dev"
   },
   "overrides": {
-    "wxAppid": "wxe26143481567cb97-test",
+    "wxAppid": "wx_demo_xxxxxxxx001-test",
     "sConfig": {
       "apiBaseUrl": "https://test-api.eheren.com",
       "debugMode": true,

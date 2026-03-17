@@ -6,7 +6,7 @@
     "updatedAt": "2024-03-15T10:30:00Z"
   },
   "overrides": {
-    "wxAppid": "wxe26143481567cb97-dev",
+    "wxAppid": "wx_demo_xxxxxxxx001-dev",
     "sConfig": {
       "apiBaseUrl": "https://dev-api.eheren.com",
       "debugMode": true,

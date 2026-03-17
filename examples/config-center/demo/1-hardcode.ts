@@ -11,19 +11,19 @@ function getHospitalConfig(sysCode: string): any {
   if (sysCode === '1001033') {
     return {
       name: '台州市第一人民医院',
-      wxAppid: 'wxe26143481567cb97',
+      wxAppid: 'wx_demo_xxxxxxxx001',
       features: { drugDelivery: true, ocr: true }
     };
   } else if (sysCode === '1001035') {
     return {
       name: '玉环市第二人民医院',
-      wxAppid: 'wx718cec315197969f',
+      wxAppid: 'wx_demo_xxxxxxxx002',
       features: { drugDelivery: false, ocr: true }
     };
   } else if (sysCode === '1001048') {
     return {
       name: '浙江省中医院西溪院区',
-      wxAppid: 'wx2af1f9ed6e1b5fb9',
+      wxAppid: 'wx_demo_xxxxxxxx003',
       features: { drugDelivery: true, ocr: false }
     };
   }
