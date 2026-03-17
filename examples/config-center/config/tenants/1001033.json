@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "sysCode": "1001033",
+    "name": "台州市第一人民医院",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2024-03-15",
+    "version": "1.0.0"
+  },
+  "sysCode": "1001033",
+  "name": "台州市第一人民医院",
+  "wxAppid": "wxe26143481567cb97",
+  "alipayAppid": "2021002139602458",
+  "isSearchInHos": true,
+  "isOpenOcr": true,
+  "sConfig": {
+    "homeNavTitleLogo": "https://cdn.eheren.com/logo/1001033.png",
+    "homeTopBanner": {
+      "topShow": true,
+      "bannerHeight": 200
+    },
+    "isHideHomeLogo": "0",
+    "isDrugDelivery": "1",
+    "isOpenHelpOld": "1",
+    "isOpenWechatSI": true,
+    "thirdPartyService": {
+      "pluginId": "PLUGIN_1001033",
+      "orgId": {
+        "10001": "H000033"
+      }
+    }
+  }
+}

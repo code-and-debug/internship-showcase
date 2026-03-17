@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "sysCode": "1001035",
+    "name": "玉环市第二人民医院",
+    "createdAt": "2024-01-15",
+    "updatedAt": "2024-03-10",
+    "version": "1.0.0"
+  },
+  "sysCode": "1001035",
+  "name": "玉环市第二人民医院",
+  "wxAppid": "wx718cec315197969f",
+  "isSearchInHos": false,
+  "isOpenOcr": true,
+  "sConfig": {
+    "homeTopBanner": {
+      "topShow": false
+    },
+    "isHideHomeLogo": "1",
+    "isDrugDelivery": "0",
+    "isOpenHelpOld": "1",
+    "thirdPartyService": {
+      "pluginId": "PLUGIN_1001035"
+    }
+  }
+}

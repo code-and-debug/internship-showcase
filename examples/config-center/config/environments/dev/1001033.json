@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "env": "dev",
+    "parent": "1001033",
+    "version": "1.2.0-dev",
+    "updatedAt": "2024-03-15T10:30:00Z"
+  },
+  "overrides": {
+    "wxAppid": "wxe26143481567cb97-dev",
+    "sConfig": {
+      "apiBaseUrl": "https://dev-api.eheren.com",
+      "debugMode": true,
+      "logLevel": "debug",
+      "isOpenHelpOld": "1"
+    }
+  }
+}

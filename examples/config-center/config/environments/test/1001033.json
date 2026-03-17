@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "env": "test",
+    "parent": "1001033",
+    "version": "1.2.0-test",
+    "updatedAt": "2024-03-14T14:00:00Z",
+    "promotedFrom": "dev"
+  },
+  "overrides": {
+    "wxAppid": "wxe26143481567cb97-test",
+    "sConfig": {
+      "apiBaseUrl": "https://test-api.eheren.com",
+      "debugMode": true,
+      "logLevel": "info"
+    }
+  }
+}
