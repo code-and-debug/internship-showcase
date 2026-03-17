@@ -21,6 +21,7 @@
 - [💼 业务洞察](#-业务洞察)
 - [🎨 产品设计](#-产品设计)
 - [💻 技术实现](#-技术实现)
+- [🏗️ 架构演进示例](#-架构演进示例)
 - [🛠️ V.A.R.C. 框架](#-varc-框架)
 - [🧠 RAC-FLOW 认知增强框架](#-rac-flow-认知增强框架)
 - [📞 联系方式](#-联系方式)
@@ -285,6 +286,61 @@ modules/
 > **技术细节**: [架构设计文档](./ARCHITECTURE.md)  
 > **重构案例**: [问卷重构分析](./modules/questionnaire-refactor/ANALYSIS.md)  
 > **智慧药房详情**: [智慧药房配送系统技术文档](./modules/pharmacy-delivery/README.md)
+
+---
+
+## 🏗️ 架构演进示例
+
+### 配置驱动架构演进（Config-Driven Architecture）
+
+基于智慧药房项目的配置管理经验，我总结了一套渐进式配置管理方案：
+
+```
+硬编码（阶段0）→ 基础配置驱动（阶段1）→ 配置中心（阶段2）
+     │                   │                      │
+     ▼                   ▼                      ▼
+  100个if-else      JSON配置文件          多环境+版本管理
+  打包失败2MB+      动态加载500KB         热更新5分钟
+```
+
+| 阶段 | 示例 | 解决问题 | 核心收益 |
+|------|------|---------|---------|
+| **阶段0** | [1-hardcode.ts](./examples/config-center/demo/1-hardcode.ts) | 硬编码导致的维护噩梦 | 问题展示 |
+| **阶段1** | [config-driven-demo](./examples/config-driven-demo/) | vendor.js体积过大 | 代码精简60%+ |
+| **阶段2** | [config-center](./examples/config-center/) | 多环境配置管理 | 配置变更无需发版 |
+
+### 阶段一：基础配置驱动
+
+**核心设计**：
+- 策略模式处理复杂业务规则
+- 三级缓存架构（内存→本地→远程）
+- TypeScript 类型安全
+
+**查看详情**：[examples/config-driven-demo/README.md](./examples/config-driven-demo/)
+
+### 阶段二：配置中心
+
+**核心特性**：
+- **多环境管理**：dev/test/prod 独立配置
+- **配置分层**：基础配置 + 环境覆盖层
+- **版本控制**：Git + 语义化版本
+- **CLI工具**：promote / diff / validate
+
+**查看详情**：[examples/config-center/README.md](./examples/config-center/)
+
+**CLI 工具使用示例**：
+```bash
+# 配置校验
+npx ts-node cli/validate.ts 1001033
+
+# 配置晋升：dev → test
+npx ts-node cli/promote.ts 1001033 dev test v1.2.0
+
+# 版本对比
+npx ts-node cli/diff.ts 1001033 v1.0.0 v1.2.0
+```
+
+**核心收益**：配置变更从"改代码+发版（2天）"降到"改JSON+提交（5分钟）"
 
 ### 产品思维体现（智慧药房项目）
 
