@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "env": "test",
+    "parent": "1001033",
+    "version": "1.0.0-test",
+    "description": "台州市第一人民医院 - 测试环境配置",
+    "updatedAt": "2024-03-19T10:30:00Z"
+  },
+  "overrides": {
+    "wxAppid": "wx_test_1001033",
+    "isStartComeTest": true,
+    "sConfig": {
+      "apiBaseUrl": "https://test-api.eheren.com",
+      "debugMode": true,
+      "logLevel": "info"
+    }
+  },
+  "secrets": {
+    "apiKey": "test_api_key_xxx",
+    "wxSecret": "test_wx_secret_xxx"
+  }
+}

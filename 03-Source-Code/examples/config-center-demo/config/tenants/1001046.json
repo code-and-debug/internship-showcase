@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.1.0",
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-03-19T10:30:00Z",
+    "description": "绍兴市人民医院 - 基础配置"
+  },
+  "sysCode": "1001046",
+  "name": "绍兴市人民医院",
+  "wxAppid": "wxb00075173e764492",
+  "alipayAppid": "2021003113623396",
+  "isvAlipayAppid": "2021003116641812",
+  "h5Appid": "wx1be541208ab16799",
+  "isSearchInHos": true,
+  "isOpenOcr": true,
+  "sConfig": {
+    "isOpenWechatSI": true,
+    "isOpenHomeTabBarMessageBtn": "1",
+    "login": { "isAliAuthBase": "1" },
+    "medicalMHelp": {
+      "isOpenPatToMedicalPat": {},
+      "wx": {
+        "crossProgramBizType": { "clinic": "6f8FEzfB6q" },
+        "medicalPlugin": "1"
+      },
+      "alipay": {
+        "medicalPlugin": {
+          "orgId": { "12930": "H33060200131", "13178": "H3306020013120" },
+          "appId": { "13178": "20" },
+          "cardType": "01"
+        },
+        "medicalFiling": "1"
+      }
+    },
+    "isOpenHelpOld": "1"
+  }
+}

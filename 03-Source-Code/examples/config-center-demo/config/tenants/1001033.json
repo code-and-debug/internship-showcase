@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-03-19T10:30:00Z",
+    "description": "台州市第一人民医院 - 基础配置"
+  },
+  "sysCode": "1001033",
+  "name": "台州市第一人民医院",
+  "wxAppid": "wxe26143481567cb97",
+  "alipayAppid": "2021002139602458",
+  "isvAlipayAppid": "2021003154665105",
+  "h5Appid": "wx8e5a08ccb011d26c",
+  "isSearchInHos": true,
+  "isOpenOcr": true,
+  "sConfig": {
+    "isOpenAlipayZndz": true,
+    "isDrugDelivery": "1",
+    "isOpenHelpOld": "1",
+    "isOpenWechatSI": true,
+    "medicalMHelp": {
+      "wx": {
+        "crossProgramBizType": { "clinic": "iAZhaFg90P" },
+        "medicalPlugin": "1"
+      },
+      "alipay": {
+        "medicalPlugin": {
+          "orgId": { "1279": "H33100300340", "1281": "H3310030034020" },
+          "cardType": "01"
+        },
+        "medicalFiling": "1",
+        "isFamilyPayment": "1"
+      }
+    }
+  }
+}

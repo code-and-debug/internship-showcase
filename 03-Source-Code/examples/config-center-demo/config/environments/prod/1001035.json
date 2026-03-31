@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "env": "prod",
+    "parent": "1001035",
+    "version": "1.2.0",
+    "description": "江苏省中医院 - 生产环境配置",
+    "updatedAt": "2024-03-19T10:30:00Z"
+  },
+  "overrides": {
+    "sConfig": {
+      "apiBaseUrl": "https://api.eheren.com",
+      "debugMode": false,
+      "logLevel": "error"
+    }
+  },
+  "secrets": {
+    "apiKey": "${PROD_API_KEY_JSSZYY}",
+    "harmony": {
+      "certpath": "${HARMONY_PROD_CERT_PATH}",
+      "keyAlias": "${HARMONY_PROD_KEY_ALIAS}",
+      "keyPassword": "${HARMONY_PROD_KEY_PASSWORD}",
+      "profile": "${HARMONY_PROD_PROFILE}",
+      "signAlg": "SHA256withECDSA",
+      "storeFile": "${HARMONY_PROD_STORE_FILE}",
+      "storePassword": "${HARMONY_PROD_STORE_PASSWORD}"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tenant Configuration Schema",
+  "description": "医院基础配置校验 Schema",
+  "type": "object",
+  "required": ["sysCode", "name"],
+  "properties": {
+    "sysCode": {
+      "type": "string",
+      "description": "医院系统编码"
+    },
+    "name": {
+      "type": "string",
+      "description": "医院名称"
+    },
+    "wxAppid": {
+      "type": "string",
+      "description": "微信小程序 AppID"
+    },
+    "alipayAppid": {
+      "type": "string",
+      "description": "支付宝小程序 AppID"
+    },
+    "isvAlipayAppid": {
+      "type": "string",
+      "description": "ISV 支付宝小程序 AppID"
+    },
+    "h5Appid": {
+      "type": "string",
+      "description": "H5 微信 AppID"
+    },
+    "toutiaoAppid": {
+      "type": "string",
+      "description": "抖音小程序 AppID"
+    },
+    "harmonyBundleName": {
+      "type": "string",
+      "description": "鸿蒙 Bundle Name"
+    },
+    "isSearchInHos": {
+      "type": "boolean",
+      "description": "是否支持院内搜索"
+    },
+    "isOpenOcr": {
+      "type": "boolean",
+      "description": "是否开启 OCR"
+    },
+    "isOpenHealthCard": {
+      "type": "object",
+      "description": "健康卡配置"
+    },
+    "sConfig": {
+      "type": "object",
+      "description": "业务功能开关配置"
+    },
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  }
+}

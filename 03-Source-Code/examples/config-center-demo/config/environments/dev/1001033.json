@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "env": "dev",
+    "parent": "1001033",
+    "version": "1.0.0-dev",
+    "description": "台州市第一人民医院 - 开发环境配置",
+    "updatedAt": "2024-03-19T10:30:00Z"
+  },
+  "overrides": {
+    "wxAppid": "wx_demo_dev_1001033",
+    "alipayAppid": "2021_dev_test_001",
+    "isStartComeTest": true,
+    "sConfig": {
+      "apiBaseUrl": "https://dev-api.eheren.com",
+      "debugMode": true,
+      "logLevel": "debug"
+    }
+  },
+  "secrets": {
+    "apiKey": "dev_api_key_xxx",
+    "wxSecret": "dev_wx_secret_xxx"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Environment Override Schema",
+  "description": "环境覆盖层配置校验 Schema",
+  "type": "object",
+  "required": ["_meta", "overrides"],
+  "properties": {
+    "_meta": {
+      "type": "object",
+      "required": ["env", "parent", "version"],
+      "properties": {
+        "env": {
+          "type": "string",
+          "enum": ["dev", "test", "prod"]
+        },
+        "parent": {
+          "type": "string",
+          "description": "关联的基础配置 sysCode"
+        },
+        "version": {
+          "type": "string",
+          "description": "配置版本号"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "description": "覆盖基础配置的字段"
+    },
+    "secrets": {
+      "type": "object",
+      "description": "敏感信息（密钥、证书等）"
+    }
+  }
+}

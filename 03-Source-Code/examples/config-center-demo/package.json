@@ -1,0 +1,26 @@
+{
+  "name": "config-center-demo",
+  "version": "1.0.0",
+  "description": "Config Center - 配置中心重构演示",
+  "main": "src/config/index.ts",
+  "scripts": {
+    "example": "ts-node examples/usage.ts",
+    "validate": "ts-node scripts/config-cli/validate.ts --all",
+    "validate:one": "ts-node scripts/config-cli/validate.ts",
+    "promote": "ts-node scripts/config-cli/promote.ts",
+    "diff": "ts-node scripts/config-cli/diff.ts",
+    "migrate": "ts-node scripts/config-cli/migrate.ts"
+  },
+  "keywords": [
+    "config-center",
+    "configuration",
+    "refactoring"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

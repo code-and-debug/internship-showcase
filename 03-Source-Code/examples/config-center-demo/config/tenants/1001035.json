@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "version": "1.2.0",
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-03-19T10:30:00Z",
+    "description": "江苏省中医院 - 基础配置"
+  },
+  "sysCode": "1001035",
+  "name": "江苏省中医院",
+  "wxAppid": "wxacb96ee66c3dee84",
+  "h5Appid": "wxa5cb8c1829e5603e",
+  "alipayAppid": "2021003104670597",
+  "isvAlipayAppid": "2021003104670597",
+  "toutiaoAppid": "tt00a7761a9facebee01",
+  "harmonyBundleName": "com.atomicservice.6917564602329951506",
+  "isOpenOcr": false,
+  "isSearchInHos": true,
+  "sConfig": {
+    "homeNavTitleLogo": "https://phsdevoss.eheren.com/pcloud/phs3.0/jiangsushengzhonnavtitle.png",
+    "isOpenMessageAuth": "1",
+    "isMessageBtnShowNew": "1",
+    "isOpenPopularSci": { "wx": "1" },
+    "isOpenWechatSI": true,
+    "isOpenHelpOld": "1",
+    "homeTopBanner": { "topShow": true },
+    "medicalMHelp": {
+      "wx": {
+        "isMedicalOrder": "1",
+        "isGbFamilyPayment": "1",
+        "medical1001035": {
+          "auth": {
+            "appId": "wxfde9fffbfa82be54",
+            "path": "pages/allOutPayCashier/authUniPro/authUni",
+            "extraData": { "appid": "96391c9afe2c46b3bba52436351dd418" }
+          },
+          "pay": {
+            "appId": "wxfde9fffbfa82be54",
+            "path": "pages/allOutPayCashier/cashierUniPro/cashierUni",
+            "extraData": {
+              "appid": "96391c9afe2c46b3bba52436351dd418",
+              "channel_code": "b756bf71948144f993bcc768fe7b0910",
+              "fixmedinsCode": "H32010400468",
+              "fixmedinsName": "江苏省中医院"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-03-19T10:30:00Z",
+    "description": "浙江省肿瘤医院 - 基础配置"
+  },
+  "sysCode": "1001093",
+  "name": "浙江省肿瘤医院",
+  "wxAppid": "wx2e06292a91e9f162",
+  "alipayAppid": "2021003104628364",
+  "h5Appid": "wx425067e6f6726598",
+  "isvAlipayAppid": "",
+  "isOpenOcr": false,
+  "isSearchInHos": true,
+  "sConfig": {
+    "homeStyle": "1",
+    "isOpenHelpOld": "1",
+    "login": { "isAliAuthBase": "1", "isSkipPerfect": "1" },
+    "isOpenWechatSI": true,
+    "isWxShowToggleEcZh": "1",
+    "homeTopBanner": { "topShow": true, "bannerHeight": 230 },
+    "medicalMHelp": {
+      "wx": {
+        "medicalPlugin": "1",
+        "medicalFiling": "1",
+        "crossProgramBizType": {
+          "clinic": "T2loeEEdAO",
+          "medicalFiling": "Xeu2ztYzX9"
+        }
+      },
+      "alipay": {
+        "medicalDefault": "1",
+        "medicalFiling": "1",
+        "isFamilyPayment": "1",
+        "medicalPlugin": { "orgId": { "13152": "H33010500310" }, "cardType": "01" }
+      }
+    },
+    "homeTopBg": "https://phsdevoss.eheren.com/pcloud/phs3.0/stand3-1001093-home-topbg.png",
+    "homeNavTitleLogo": "https://phsdevoss.eheren.com/pcloud/phs3.0/stand3-1001093-home-navtitle.png"
+  }
+}

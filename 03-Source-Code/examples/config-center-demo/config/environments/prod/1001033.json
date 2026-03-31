@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "env": "prod",
+    "parent": "1001033",
+    "version": "1.0.0",
+    "description": "台州市第一人民医院 - 生产环境配置",
+    "updatedAt": "2024-03-19T10:30:00Z"
+  },
+  "overrides": {
+    "isStartComeTest": false,
+    "sConfig": {
+      "apiBaseUrl": "https://api.eheren.com",
+      "debugMode": false,
+      "logLevel": "error"
+    }
+  },
+  "secrets": {
+    "apiKey": "${PROD_API_KEY}",
+    "wxSecret": "${PROD_WX_SECRET}"
+  }
+}

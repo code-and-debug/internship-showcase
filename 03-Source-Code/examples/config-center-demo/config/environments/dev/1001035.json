@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "env": "dev",
+    "parent": "1001035",
+    "version": "1.2.0-dev",
+    "description": "江苏省中医院 - 开发环境配置",
+    "updatedAt": "2024-03-19T10:30:00Z"
+  },
+  "overrides": {
+    "wxAppid": "wx_dev_jsszyy",
+    "sConfig": {
+      "apiBaseUrl": "https://dev-api.eheren.com",
+      "debugMode": true,
+      "logLevel": "debug"
+    }
+  },
+  "secrets": {
+    "apiKey": "dev_api_key_jsszyy",
+    "harmony": {
+      "certpath": "/Users/dev/Documents/harmony/dev.cer",
+      "keyAlias": "devAlias",
+      "keyPassword": "dev_password_placeholder",
+      "profile": "/Users/dev/Documents/harmony/devProfileDebug.p7b",
+      "signAlg": "SHA256withECDSA",
+      "storeFile": "/Users/dev/Documents/harmony/dev.p12",
+      "storePassword": "dev_store_password_placeholder"
+    }
+  }
+}
